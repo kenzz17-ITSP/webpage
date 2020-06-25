@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap-social/bootstrap-social.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/senti.css' %}">
+    <script type="text/javascript" src="{% static 'array1.js' %}"></script>
+    <title>Sentiment Analysis</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+                
+            </button>
+            <a href="templates/itsp1.html" class="navbar-brand mr-auto "><img src="static/img/sentiment.jpg" height="30" width="41"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a href="#" class="nav-link"><span class="fa fa-home fa-lg"></span>Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-info fa-lg"></span>About</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span>Menu</a></li>
+                    <li class="nav-item "><a href="templates/feedback.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span>Feedback</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div id="carousel" class="carousel slide" data-ride="carousel" >
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" style="background-color: #808080; background-image: url('static/img/sentiment3.jpg');">
+                    <div class="carousel-caption ">
+                        <div class="row row-header">
+                            <div class="col-12 col-sm-9">
+                                <h1 style="font-family: serif; margin-top: 1px;text-align: center;font-size: 400%;color: black" >Words Contain Value</h1><br><br><br>
+                                <p class="d-none d-md-block" style="color: black;"><em>Big market price changes happen when lots of people are forced to reevaluate their prejudices, not necessarily when the world actually changes. — Colm O'Shea.</em></p>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-color: #ff0; background-image: url('static/img/sentiment2.png')">
+                </div>
+                
+                <div class="carousel-item" style="background-color: #808080; background-image: url('static/img/dream_h4.jpg');">
+                </div>
+            </div>
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>    
+    </header>
+    <div class="container" id="senti">
+    <div class="row row-content">
+           <div class="col-12 col-md-9">
+              <h2 >Check sentiment</h2>
+           </div>
+            <div class="col-12 col-md-9">
+                <form method='POST'>
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label for="text" class="col-md-6 col-form-label"></label>
+                        <div class="col-md-10 offset-md-2">
+                            <input type="text" name="text" class="form-control" id="text" placeholder="Enter sentence" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="offset-md-5 col-md-10">
+                            <button type="submit" class="btn btn-primary">
+                                Check sentiment
+                            </button>
+                        </div>  
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-4 col-md-10">
+                            <a href="template/feedback.html" style="color: #00f">if you're not satisfied, please let us know</a>
+                        </div>  
+                    </div>
+                </form>
+                <br>
+                <p>The sentiment</p>
+            </div>
+             <div class="col-12 col-md">
+
+            </div>
+       </div>
+   </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="templates/feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Address</h5>
+                    <address>
+                        H16-B<br>
+                        IIT Bombay, Powai<br>
+                        Mumbai<br>
+                        <i class="fa fa-phone fa-lg"></i>: +91-1122334455<br>
+                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:ac.akshay18@gmail.com">kenzz17@gmail.com</a>
+                   </address>
+                </div>
+                <div class="col-12 col-sm-4 ">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/profile.php?id=100007952866598"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-github" href="https://www.github.com"><i class="fa fa-github fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:ac.akshay18@gmail.com"><i class="fa fa-envelope-o fa-lg"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright Kenzz17</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+    <script src="{% static 'jquery/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'popper/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
