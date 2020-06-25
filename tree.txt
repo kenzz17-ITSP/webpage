@@ -1,0 +1,115 @@
+.
+├── db.sqlite3
+├── manage.py
+├── model
+│   ├── fullmodel7374
+│   │   ├── assets
+│   │   ├── model.h5
+│   │   ├── model.json
+│   │   ├── saved_model.pb
+│   │   ├── tokenizer.p
+│   │   ├── variables
+│   │   │   ├── variables.data-00000-of-00001
+│   │   │   └── variables.index
+│   │   └── wordindex.p
+│   ├── model.h5
+│   ├── model.json
+│   ├── tokenizer.p
+│   └── wordindex.p
+├── model.h5
+├── README.md
+├── sentiment
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-36.pyc
+│   │   ├── __init__.cpython-38.pyc
+│   │   ├── settings.cpython-36.pyc
+│   │   ├── settings.cpython-38.pyc
+│   │   ├── urls.cpython-36.pyc
+│   │   ├── urls.cpython-38.pyc
+│   │   ├── wsgi.cpython-36.pyc
+│   │   └── wsgi.cpython-38.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── static
+│   ├── bootstrap
+│   │   ├── css
+│   │   │   ├── bootstrap.css
+│   │   │   └── bootstrap.min.css
+│   │   └── js
+│   │       └── bootstrap.min.js
+│   ├── bootstrap-social
+│   │   ├── bootstrap-social.css
+│   │   ├── bootstrap-social.less
+│   │   ├── bootstrap-social.scss
+│   │   ├── bower.json
+│   │   ├── index.html
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── css
+│   │   └── senti.css
+│   ├── font-awesome
+│   │   ├── css
+│   │   │   ├── font-awesome.css
+│   │   │   ├── font-awesome.css.map
+│   │   │   └── font-awesome.min.css
+│   │   ├── fonts
+│   │   │   ├── FontAwesome.otf
+│   │   │   ├── fontawesome-webfont.eot
+│   │   │   ├── fontawesome-webfont.svg
+│   │   │   ├── fontawesome-webfont.ttf
+│   │   │   ├── fontawesome-webfont.woff
+│   │   │   └── fontawesome-webfont.woff2
+│   │   ├── HELP-US-OUT.txt
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── img
+│   │   ├── dream_h4.jpg
+│   │   ├── sentiment2.png
+│   │   ├── sentiment3.jpg
+│   │   ├── sentiment4.jpg
+│   │   └── sentiment.jpg
+│   ├── jquery
+│   │   ├── jquery.js
+│   │   ├── jquery.min.js
+│   │   ├── jquery.slim.js
+│   │   └── jquery.slim.min.js
+│   ├── js
+│   │   ├── bootstrap.min.js
+│   │   ├── jquery.js
+│   │   ├── jquery.min.js
+│   │   ├── jquery.slim.js
+│   │   ├── jquery.slim.min.js
+│   │   ├── popper.js
+│   │   └── popper.min.js
+│   └── popper
+│       ├── popper.js
+│       └── popper.min.js
+├── templates
+│   ├── feedback.html
+│   └── itsp1.html
+├── testing.py
+├── texteye
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       └── __init__.cpython-36.pyc
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── admin.cpython-36.pyc
+│   │   ├── __init__.cpython-36.pyc
+│   │   ├── models.cpython-36.pyc
+│   │   ├── urls.cpython-36.pyc
+│   │   └── views.cpython-36.pyc
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+└── tree.txt
+
+24 directories, 88 files
