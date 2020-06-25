@@ -77,26 +77,18 @@ print("Loaded model from disk")
 
 # Create your views here.
 def index(request):
+    return render(request,'itsp1.html')
 
-    context= {
-        'stop_words':['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', "you're", "you've", "you'll", "you'd", 'your', 'yours', 'yourself', 'yourselves', 'he', 'him', 'his', 'himself', 'she', "she's", 'her', 'hers', 'herself', 'it', "it's", 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that', "that'll", 'these', 'those', 'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does', 'did', 'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until', 'while', 'of', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'nor', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', "should've", 'now', 'd', 'll', 'm', 'o', 're', 've', 'y', 'ain', 'aren', "aren't", 'couldn', "couldn't", 'didn', "didn't", 'doesn', "doesn't", 'hadn', "hadn't", 'hasn', "hasn't", 'haven', "haven't", 'isn', "isn't", 'ma', 'mightn', "mightn't", 'mustn', "mustn't", 'needn', "needn't", 'shan', "shan't", 'shouldn', "shouldn't", 'wasn', "wasn't", 'weren', "weren't", 'won', "won't", 'wouldn', "wouldn't"],
-        'stemmer':SnowballStemmer("english"),
-        'embedding_dim':100,
-        'max_length':100,
-        'trunc_type':'post',
-        'padding_type':'post',
-        'oov_tok':"<OOV>"
-    }
-    return render(request,'itsp1.html', context=context )
+def feedback(request):
+    return render(request, 'feedback.html')
 
 def predict(request):
-
-
-
-
+    
     # Input
     # twt = ['i like the way you smile']
     
+    sentence = request.GET.get('text',None)
+    twt = sentence
     # Preprocess
     twt = strip_links(twt)    #optional
     twt = strip_all_entities(twt)  #optional (it removes @username #name)
@@ -106,10 +98,10 @@ def predict(request):
     list_form.append(twt)
 
     # Tokenize
-    twt = tokenizer.texts_to_sequences(twt)
+    twt = tokenizer.texts_to_sequences(list_form)
 
     # Padding
-    twt = padded = pad_sequences(twt, maxlen=50, padding = padding_type, truncating=trunc_type)
+    twt = padded = pad_sequences(twt, maxlen=max_length, padding = padding_type, truncating=trunc_type)
     print(twt)
 
     # Predict
@@ -121,5 +113,5 @@ def predict(request):
         ans = 'positive'
     else:
         ans = 'negative'
-    print(ans)
-    return 
+    context= {'sentence': sentence, 'sentiment':ans} 
+    return render(request, 'itsp1.html', context)

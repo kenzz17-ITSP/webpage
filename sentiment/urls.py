@@ -17,12 +17,15 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls import url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from texteye.views import index
+from texteye.views import index, feedback, predict
 
 urlpatterns = [
     path('texteye/', include('texteye.urls')),
     path('admin/', admin.site.urls),
     url('^$', index, name='homepage'),
+    url(r'^feedback', feedback, name='feedback'),
+    url('predict', predict, name='predict'),
+
 ]
 
 urlpatterns += staticfiles_urlpatterns()
