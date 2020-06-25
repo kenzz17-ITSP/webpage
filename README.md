@@ -32,4 +32,4 @@ Webpage for presentation of work done during ITSP 2019-20
   ```
   python3 manage.py runserver
   ```
-
+Check tree.txt for files to be kept inside model directory
