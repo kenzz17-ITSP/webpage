@@ -20,7 +20,7 @@ Webpage for presentation of work done during ITSP 2019-20
   ```
   Activate virtual env
   ```
-  sourve venv/bin/activate
+  source env/bin/activate
   ```
   
 * Install requirements, suppose your folder name is abc
