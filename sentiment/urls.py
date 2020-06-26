@@ -23,6 +23,7 @@ urlpatterns = [
     path('texteye/', include('texteye.urls')),
     path('admin/', admin.site.urls),
     url('^$', index, name='homepage'),
+    url(r'^applications', applications, name='applications'),
     url(r'^feedback', feedback, name='feedback'),
     url('predict', predict, name='predict'),
     url('store_feedback',store_feedback, name='store feedback')
