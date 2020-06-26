@@ -7,7 +7,7 @@ Webpage for presentation of work done during ITSP 2019-20
   ```
   git clone https://github.com/kenzz17-ITSP/webpage.git
   ```
-  (or download the zip file from the top right green button
+  (or download the zip file from the top right green button)
 * Virtual Environment (Optional)
   ```
   pip3 install virtualenv
@@ -26,7 +26,7 @@ Webpage for presentation of work done during ITSP 2019-20
 * Install requirements, suppose your folder name is abc
   ```
   cd abc
-  pip3 install -r requirements.txt (yet to make)
+  pip3 install -r requirements.txt
   ```
 * Run Django server
   ```
