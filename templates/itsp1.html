@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a href="#" class="nav-link"><span class="fa fa-home fa-lg"></span>Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-info fa-lg"></span>About</a></li>
+                    <li class="nav-item"><a href="applications" class="nav-link"><span class="fa fa-info fa-lg"></span>Applications</a></li>
                     <li class="nav-item "><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span>Menu</a></li>
                     <li class="nav-item "><a href="feedback" class="nav-link"><span class="fa fa-address-card fa-lg"></span>Feedback</a></li>
                 </ul>
@@ -68,24 +68,24 @@
             </a>
         </div>    
     </header>
-    <div class="container" id="senti">
+    <div class="container offset-md-2 senti">
     <div class="row row-content">
            <div class="col-12 col-md-9">
-              <h2 >Check sentiment</h2>
+              <h2 style="font-size: 300%; font-variant: small-caps;font-weight: bold;" >Check sentiment</h2>
            </div>
-            <div class="col-12 col-md-9">
+            <div class="col-12 col-md-9 ">
                 <form method='GET' action='/predict'>
                     {% csrf_token %}
                     <div class="form-group row">
                         <label for="text" class="col-md-6 col-form-label"></label>
                         <div class="col-md-10 offset-md-2">
-                            <input type="text" name="text" class="form-control" id="text" placeholder="Enter sentence" required>
+                            <input type="text" name="text" class="form-control" id="text" placeholder="Enter sentence" style="padding: 20px;" required>
                         </div> 
                     </div>
                     
                     <div class="form-group row">
                         <div class="offset-md-5 col-md-10">
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary" >
                                 Check sentiment
                             </button>
                         </div>  
@@ -97,7 +97,7 @@
                     </div>
                 </form>
                 <br>
-                <p>The predicted sentiment for your sentence: "{{sentence}}" is :- {{sentiment}}</p>
+                <p class="offset-md-2" style="font-size: 120%">The predicted sentiment for your sentence: "<b>{{sentence}}</b>" is :- <div class="btn btn-danger offset-md-6" >{{sentiment}}</div></p>
             </div>
              <div class="col-12 col-md">
 
@@ -111,9 +111,9 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="applications">Applications</a></li>
                         <li><a href="#">Menu</a></li>
-                        <li><a href="templates/feedback.html">Feedback</a></li>
+                        <li><a href="feedback">Feedback</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
@@ -123,15 +123,15 @@
                         IIT Bombay, Powai<br>
                         Mumbai<br>
                         <i class="fa fa-phone fa-lg"></i>: +91-1122334455<br>
-                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:ac.akshay18@gmail.com">kenzz17@gmail.com</a>
+                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:kenzz17@gmail.com">kenzz17@gmail.com</a>
                    </address>
                 </div>
                 <div class="col-12 col-sm-4 ">
                     <div class="text-center">
-                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/profile.php?id=100007952866598"><i class="fa fa-facebook fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-github" href="https://www.github.com"><i class="fa fa-github fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-github" href="https://www.github.com/orgs/kenzz17-ITSP/dashboard"><i class="fa fa-github fa-lg"></i></a>
                         <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:ac.akshay18@gmail.com"><i class="fa fa-envelope-o fa-lg"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:kenzz17@gmail.com"><i class="fa fa-envelope-o fa-lg"></i></a>
                     </div>
                 </div>
            </div>

@@ -26,8 +26,8 @@
             <a href="templates/itsp1.html" class="navbar-brand mr-auto "><img src="static/img/sentiment.jpg" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item "><a href="itsp1.html" class="nav-link"><span class="fa fa-home fa-lg"></span>Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-info fa-lg"></span>About</a></li>
+                    <li class="nav-item "><a href="itsp1" class="nav-link"><span class="fa fa-home fa-lg"></span>Home</a></li>
+                    <li class="nav-item"><a href="applications" class="nav-link"><span class="fa fa-info fa-lg"></span>Applications</a></li>
                     <li class="nav-item "><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span>Menu</a></li>
                     <li class="nav-item active"><a href="#" class="nav-link"><span class="fa fa-address-card fa-lg"></span>Feedback</a></li>
                 </ul>
@@ -85,8 +85,7 @@
               <h3>Send us your Feedback</h3>
            </div>
             <div class="col-12 col-md-9">
-                <form method="POST" action='/store_feedback'>
-                    {% csrf_token %}
+                <form>
                     <div class="form-group row">
                         <label for="text" class="col-md-2 col-form-label">Text Transcript</label>
                         <div class="col-md-10">
@@ -98,9 +97,9 @@
                             <label class="form-check-label" required for="approve"><strong>Sentiment you recieved</strong></label>
                         </div>
                         <div class="col-md-3 offset-md-1">
-                            <select name="predicted" id="predicted" class="form-control required">
-                                <option value='Positive'>Positive</option>
-                                <option value="Negative">Negative</option>
+                            <select name="approve" id="approve" class="form-control required">
+                                <option>Positive</option>
+                                <option>Negative</option>
                             </select>
                             
                         </div>
@@ -110,9 +109,9 @@
                             <strong>What sentiment it should be</strong>
                         </div>
                         <div class="col-md-3 offset-md-1">
-                            <select class="form-control" name="actual" id="actual" required>
-                                <option value="Positive">Positive</option>
-                                <option value="Negative">Negative</option>
+                            <select class="form-control" required>
+                                <option>Positive</option>
+                                <option>Negative</option>
                             </select> 
                         </div>
                     </div>
@@ -145,7 +144,7 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="itsp1.html">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="applications">Applications</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Feedback</a></li>
                     </ul>
@@ -157,15 +156,15 @@
                         IIT Bombay, Powai<br>
                         Mumbai<br>
                         <i class="fa fa-phone fa-lg"></i>: +91-1122334455<br>
-                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:ac.akshay18@gmail.com">kenzz17@gmail.com</a>
+                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:kenzz17@gmail.com">kenzz17@gmail.com</a>
                    </address>
                 </div>
                 <div class="col-12 col-sm-4 ">
                     <div class="text-center">
-                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/profile.php?id=100007952866598"><i class="fa fa-facebook fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-github" href="https://www.github.com"><i class="fa fa-github fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-github" href="https://www.github.com/orgs/kenzz17-ITSP/dashboard"><i class="fa fa-github fa-lg"></i></a>
                         <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:ac.akshay18@gmail.com"><i class="fa fa-envelope-o fa-lg"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:kenzz1718@gmail.com"><i class="fa fa-envelope-o fa-lg"></i></a>
                     </div>
                 </div>
            </div>
