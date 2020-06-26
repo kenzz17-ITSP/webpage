@@ -85,7 +85,8 @@
               <h3>Send us your Feedback</h3>
            </div>
             <div class="col-12 col-md-9">
-                <form>
+                <form method="POST" action='/store_feedback'>
+                    {% csrf_token %}
                     <div class="form-group row">
                         <label for="text" class="col-md-2 col-form-label">Text Transcript</label>
                         <div class="col-md-10">
@@ -97,9 +98,9 @@
                             <label class="form-check-label" required for="approve"><strong>Sentiment you recieved</strong></label>
                         </div>
                         <div class="col-md-3 offset-md-1">
-                            <select name="approve" id="approve" class="form-control required">
-                                <option>Positive</option>
-                                <option>Negative</option>
+                            <select name="predicted" id="predicted" class="form-control required">
+                                <option value='Positive'>Positive</option>
+                                <option value="Negative">Negative</option>
                             </select>
                             
                         </div>
@@ -109,9 +110,9 @@
                             <strong>What sentiment it should be</strong>
                         </div>
                         <div class="col-md-3 offset-md-1">
-                            <select class="form-control" required>
-                                <option>Positive</option>
-                                <option>Negative</option>
+                            <select class="form-control" name="actual" id="actual" required>
+                                <option value="Positive">Positive</option>
+                                <option value="Negative">Negative</option>
                             </select> 
                         </div>
                     </div>

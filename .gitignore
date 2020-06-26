@@ -5,3 +5,5 @@ model/model.json
 model/tokenizer.p
 model/wordindex.p
 model.h5
+model/data_ext.txt
+model/feedback.txt

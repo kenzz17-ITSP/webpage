@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls import url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from texteye.views import index, feedback, predict
+from texteye.views import index, feedback, predict, store_feedback
 
 urlpatterns = [
     path('texteye/', include('texteye.urls')),
@@ -25,6 +25,7 @@ urlpatterns = [
     url('^$', index, name='homepage'),
     url(r'^feedback', feedback, name='feedback'),
     url('predict', predict, name='predict'),
+    url('store_feedback',store_feedback, name='store feedback')
 
 ]
 

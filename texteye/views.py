@@ -115,3 +115,27 @@ def predict(request):
         ans = 'negative'
     context= {'sentence': sentence, 'sentiment':ans} 
     return render(request, 'itsp1.html', context)
+
+def store_feedback(request):
+    
+    sentence = request.POST.get('text',None)
+    predicted = request.POST.get('predicted', 'Positive')
+    actual = request.POST.get('actual','Positive')
+
+    other_feedback = request.POST.get('feedback',None)
+    
+    FILE_DIR = 'model/'
+
+    data_file_loc = FILE_DIR + 'data_ext.txt'
+
+    if sentence:
+        with open(data_file_loc,'a+') as f:
+            f.write(sentence + ':' + 'predicted:' + predicted + '/' + 'actual:'+ actual + '\n')
+
+    feedback_file_loc = FILE_DIR + 'feedback.txt'
+
+    if other_feedback:
+        with open(feedback_file_loc,'a+') as feedback:
+            feedback.write(other_feedback + '\n')
+
+    return render(request,'feedback.html')
