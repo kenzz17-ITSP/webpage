@@ -19,12 +19,34 @@ h2{
 	text-align: center;
 	margin-bottom: 40px;
 }
-#senti{
+.senti{
 	margin-top: 20px;
 	margin-bottom: 20px;
-	background-image: url('img/sentiment4.jpg');
+	background-image: url('../img/opacity.png');  
 	background-repeat: no-repeat;
 	background-size: 80% 100%;
+}
+.myclass{
+	margin: 10px 0px 10px 0px;
+	padding: 20px 0px 50px 0px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	background: linear-gradient(#666666 0%, #00b7ea 100%);
+}
+.media{
+	background:#c0c0c0;
+	border-radius: 10px;
+	padding: 3px;
+}
+.card-body{
+	padding: 3px;
+}
+.card-header{
+   	font-style: serif;
+   	font-variant:small-caps;
+}
+.card-header:hover{
+	background-color: #808080;
 }
 
 .row-content{
