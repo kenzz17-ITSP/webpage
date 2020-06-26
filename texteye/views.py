@@ -82,6 +82,9 @@ def index(request):
 def feedback(request):
     return render(request, 'feedback.html')
 
+def applications(request):
+    return render(request, 'applications.html')
+
 def predict(request):
     
     # Input
