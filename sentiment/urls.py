@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls import url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from texteye.views import index, feedback, predict, store_feedback
+from texteye.views import index, feedback, predict, store_feedback, applications
 
 urlpatterns = [
     path('texteye/', include('texteye.urls')),
