@@ -45,20 +45,6 @@ def strip_all_entities(text):
                 words.append(word)
     return ' '.join(words)
 
-def preprocess(line):
-    line = line.lower()
-    #stopwords removal
-    for word in stop_words:
-      token = " " + word + " "
-      line = line.replace(token, " ")
-      line = line.replace("  ", " ")
-    #stemming   
-    tokens = []
-    for token in line.split():
-      tokens.append(stemmer.stem(token))
-    return " ".join(tokens)
-
-
 # Load Tokenizer
 tokenizer= Tokenizer(oov_token=oov_tok)
 tokenizer = pickle.load(open("model/tokenizer.p", "rb"))
@@ -95,7 +81,6 @@ def predict(request):
     # Preprocess
     twt = strip_links(twt)    #optional
     twt = strip_all_entities(twt)  #optional (it removes @username #name)
-    twt = preprocess(twt)
     # print(twt)
     list_form = []        # convert to ['input']
     list_form.append(twt)
