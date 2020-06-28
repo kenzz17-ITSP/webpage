@@ -33,3 +33,5 @@ Webpage for presentation of work done during ITSP 2019-20
   python3 manage.py runserver
   ```
 Check tree.txt for files to be kept inside model directory
+##Disclaimer
+This repo contains a few old model files which were later improved upon and now exceed GitHub size limit. Sorry for the inconvenience.
