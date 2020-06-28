@@ -1,9 +1,3 @@
 testing.py
-model/fullmodel7374
-model/model.h5
-model/model.json
-model/tokenizer.p
-model/wordindex.p
+./model/*
 model.h5
-model/data_ext.txt
-model/feedback.txt
