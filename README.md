@@ -8,6 +8,7 @@ Webpage for presentation of work done during ITSP 2019-20
   git clone https://github.com/kenzz17-ITSP/webpage.git
   ```
   (or download the zip file from the top right green button)
+  
 * Virtual Environment (Optional)
   ```
   pip3 install virtualenv
@@ -22,16 +23,22 @@ Webpage for presentation of work done during ITSP 2019-20
   ```
   source env/bin/activate
   ```
+* Unzip drive-download-20200628T124658Z-001.zip and rename the following files.
+  ```
+  1. model2.h5 -> model.h5
+  2. model2.json -> model.json
+  3. tokenizefinal.p -> tokenizer.p
+  ```
+  After renaming, replace all the files already present in the cloned folder with the same names as above with these new files (take help of tree.txt to locate all).
   
 * Install requirements, suppose your folder name is abc
   ```
   cd abc
   pip3 install -r requirements.txt
   ```
+  
 * Run Django server
   ```
   python3 manage.py runserver
   ```
 Check tree.txt for files to be kept inside model directory
-##Disclaimer
-This repo contains a few old model files which were later improved upon and now exceed GitHub size limit. Sorry for the inconvenience.
