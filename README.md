@@ -42,3 +42,7 @@ Webpage for presentation of work done during ITSP 2019-20
   python3 manage.py runserver
   ```
 Check tree.txt for files to be kept inside model directory
+
+## Model Training
+The model was trained in the following colab notebook : 
+https://colab.research.google.com/drive/128ZkorEyBc-Bnkgw_CiD2uKlg8brc-Ra?usp=sharing
